@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>患上不出道就會死的病 - 小說交流區</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- GUN.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>患上不出道就會死的病</h1>
+            <p class="subtitle">데뷔못하면죽는병걸림</p>
+            <div class="header-meta">
+                <span class="meta-item">原作：장진(張震)</span>
+                <span class="meta-item">腳本：소흔(素痕)</span>
+                <span class="meta-item">繪畫：백덕수(白德秀)</span>
+                <span class="meta-item">類型：網漫改編 / 偶像劇情 / 奇幻</span>
+                <span class="meta-item">連載平台：카카오페이지 (KakaoPage)</span>
+                <span class="meta-item">連載狀態：連載中</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- 小說簡介區塊 -->
+            <section class="novel-intro">
+                <h2>作品簡介</h2>
+                <div class="intro-content">
+                    <div class="info-box">
+                        <p class="highlight-text">「如果不能成為偶像就會死，這就是我的診斷結果。」</p>
+                    </div>
+                    <p>在這個世界裡，存在著一種奇特的疾病——「不出道死亡病」。患者必須在特定年齡前在演藝圈出道，否則就會因病離世。這個故事講述了19歲的普通大學生朴炆旲，在例行體檢中被診斷出患有這種疾病後的生存之路。</p>
+                    <p>為了活下去，原本對演藝圈毫無興趣的朴炆旲被迫放棄首爾大學經濟系的學業，踏上成為偶像的艱難道路。在StarRoad娛樂公司的練習生選拔中，他遇見了同樣身患「不出道死亡病」的其他練習生。懷著對生存的渴望，他們組成了充滿希望與夢想的男團TeSTAR。</p>
+                    <p>在殘酷的娛樂圈中，這群年輕人不僅要面對出道的重重困難，更要與死亡的威脅搏鬥。他們的故事不僅關乎夢想，更是一場關於生存的掙扎。作品以獨特的設定，展現了韓國娛樂圈的現實與殘酷，以及年輕人為夢想奮鬥的決心。</p>
+                </div>
+            </section>
+
+            <!-- TeSTAR團體介紹 -->
+            <section class="group-intro">
+                <h2>TeSTAR 團體介紹</h2>
+                <div class="group-content">
+                    <p class="group-name"><span class="kr">TeSTAR</span> | <span class="meaning">Test（考驗）+ Star（明星）= 通過考驗的星星們</span></p>
+                    <p class="group-desc">TeSTAR 是由同樣患有「不出道死亡病」的練習生們組成的男團。團名象徵著他們必須通過重重考驗才能成為閃耀的星星，也暗示著他們正面臨著生存的測試。</p>
+                    <div class="group-stats">
+                        <div class="stat-item">所屬公司：Star Road Entertainment</div>
+                        <div class="stat-item">出道目標：2025年夏季</div>
+                        <div class="stat-item">成員人數：7名</div>
+                        <div class="stat-item">粉絲名：Stellar（恆星）</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 主要角色介紹 -->
+            <section class="character-intro">
+                <h2>主要角色介紹</h2>
+                <div class="character-list">
+                    <div class="character-card">
+                        <h3>朴炆旲 (박현우)</h3>
+                        <p class="character-meta">主唱 | 19歲</p>
+                        <p>本故事的男主角，原本是首爾大學經濟系的大二學生。在一次體檢中被診斷出患有「不出道死亡病」，被迫踏上練習生之路。雖然沒有特別出眾的才能，但擁有過人的毅力和認真的態度。通過不斷的練習，逐漸展現出優秀的歌唱實力。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 發表新文章區域 -->
+            <section class="post-form">
+                <h2>發表新文章</h2>
+                <form id="newPostForm">
+                    <input type="text" id="postTitle" placeholder="文章標題" required>
+                    <textarea id="postContent" placeholder="分享您的想法..." required></textarea>
+                    <button type="submit">發表</button>
+                </form>
+            </section>
+
+            <!-- 文章列表 -->
+            <section class="posts">
+                <h2>所有文章</h2>
+                <div id="postsList">
+                    <!-- 文章會動態插入這裡 -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
