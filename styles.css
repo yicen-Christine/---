@@ -107,132 +107,156 @@ button:hover {
     color: #999;
 }
 
-.header-meta {
-    margin-top: 15px;
+.story-keywords {
+    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-.meta-item {
-    color: #666;
+.keyword {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
     font-size: 0.9em;
-    padding: 5px 10px;
-    background: #f8f8f8;
-    border-radius: 4px;
+    display: inline-block;
 }
 
-.novel-intro, .group-intro {
+/* 劇情發展區塊樣式 */
+.story-development, .character-intro {
     background-color: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
     margin-bottom: 30px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.intro-content p {
-    margin-bottom: 15px;
-    line-height: 1.8;
-    color: #444;
-}
-
-.group-content {
+/* 劇情發展區塊樣式更新 */
+.story-phase {
+    margin-bottom: 25px;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 6px;
-}
-
-.group-name {
-    font-size: 1.2em;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #4CAF50;
-}
-
-.group-name .kr {
-    font-weight: bold;
-    color: #1a237e;
-}
-
-.group-name .meaning {
-    font-size: 0.9em;
-    color: #666;
-}
-
-.group-desc {
-    margin: 15px 0;
-    line-height: 1.8;
-    color: #444;
-}
-
-.group-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.stat-item {
-    padding: 10px;
-    color: #333;
-    border-left: 3px solid #4CAF50;
-    background: #f5f5f5;
-}
-
-.info-box {
-    background-color: #f8f9fa;
+    border-radius: 8px;
+    background: #f8f8f8;
     border-left: 4px solid #4CAF50;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 0 8px 8px 0;
 }
 
-.highlight-text {
-    font-size: 1.2em;
-    color: #2c3e50;
-    font-style: italic;
-    line-height: 1.6;
-    margin: 0;
+.story-phase:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
+.story-phase h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* 角色卡片樣式 */
 .character-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px 0;
+    margin-top: 20px;
 }
 
 .character-card {
-    background: white;
-    padding: 20px;
+    background: #f8f8f8;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    border: 1px solid #eee;
     transition: transform 0.2s;
 }
 
 .character-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 特殊角色卡片樣式 */
+.character-card.main-character {
+    border-left: 4px solid #4CAF50;
+    background: linear-gradient(to right, #f8fff8, #fff);
+}
+
+.character-card.rival {
+    border-left: 4px solid #2196F3;
+    background: linear-gradient(to right, #f8f8ff, #fff);
+}
+
+.character-card.mentor {
+    border-left: 4px solid #FF9800;
+    background: linear-gradient(to right, #fff8f0, #fff);
 }
 
 .character-card h3 {
-    color: #1a237e;
-    margin-bottom: 10px;
+    color: #4CAF50;
+    margin-bottom: 15px;
     border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
-.character-meta {
+/* 角色資訊格式化 */
+.character-info {
     color: #666;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-    padding: 5px 10px;
-    background: #f5f5f5;
-    border-radius: 4px;
+}
+
+.character-info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.character-role {
     display: inline-block;
+    padding: 4px 10px;
+    background: #4CAF50;
+    color: white !important;
+    border-radius: 15px;
+    font-size: 0.9em;
+    margin-bottom: 12px !important;
+}
+
+.character-card.rival .character-role {
+    background: #2196F3;
+}
+
+.character-card.mentor .character-role {
+    background: #FF9800;
+}
+
+.header-meta {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.meta-item {
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 響應式設計調整 */
+@media (max-width: 768px) {
+    .character-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-meta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-phase {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+    
+    .character-card {
+        margin-bottom: 15px;
+    }
 }
